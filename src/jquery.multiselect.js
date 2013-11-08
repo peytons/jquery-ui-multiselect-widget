@@ -57,8 +57,9 @@
       this._namespaceID = this.eventNamespace || ('multiselect' + multiselectID);
 
       var button = (this.button = $('<button type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button>'))
-        .addClass('ui-multiselect ui-widget ui-state-default ui-corner-all')
+        .addClass('ui-multiselect ui-corner-all')
         .addClass(o.classes)
+        .addClass(o.buttonClasses)
         .attr({ 'title':el.attr('title'), 'aria-haspopup':true, 'tabIndex':el.attr('tabIndex') })
         .insertAfter(el),
 
@@ -424,15 +425,16 @@
 
     // set button width
     _setButtonWidth: function() {
-      var width = this.element.outerWidth();
+      //var width = this.element.outerWidth();
+      var width
       var o = this.options;
 
       if(/\d/.test(o.minWidth) && width < o.minWidth) {
         width = o.minWidth;
+        // set widths
+        this.button.outerWidth(width);
       }
 
-      // set widths
-      this.button.outerWidth(width);
     },
 
     // set menu width
