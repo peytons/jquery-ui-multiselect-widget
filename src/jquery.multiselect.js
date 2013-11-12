@@ -342,6 +342,7 @@
           case 9: // tab
             case 27: // esc
             self.close();
+            button.focus();
           break;
           case 38: // up
             case 40: // down
