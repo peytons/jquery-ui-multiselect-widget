@@ -259,7 +259,7 @@
       // button events
       button.bind({
         click: clickHandler,
-        keypress: function(e) {
+        keydown: function(e) {
           switch(e.which) {
             case 27: // esc
               case 38: // up
