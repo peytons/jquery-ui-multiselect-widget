@@ -68,7 +68,7 @@
           .appendTo(button),
 
         menu = (this.menu = $('<div />'))
-          .addClass('ui-multiselect-menu ui-widget ui-widget-content ui-corner-all')
+          .addClass('ui-multiselect-menu ui-corner-all')
           .addClass(o.classes)
           .appendTo($(o.appendTo)),
 
